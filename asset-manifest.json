@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/CFP/static/css/main.28df0447.chunk.css",
+    "main.js": "/CFP/static/js/main.55e81f91.chunk.js",
+    "main.js.map": "/CFP/static/js/main.55e81f91.chunk.js.map",
+    "runtime-main.js": "/CFP/static/js/runtime-main.b47e817f.js",
+    "runtime-main.js.map": "/CFP/static/js/runtime-main.b47e817f.js.map",
+    "static/css/2.81bf1c20.chunk.css": "/CFP/static/css/2.81bf1c20.chunk.css",
+    "static/js/2.c83ba16d.chunk.js": "/CFP/static/js/2.c83ba16d.chunk.js",
+    "static/js/2.c83ba16d.chunk.js.map": "/CFP/static/js/2.c83ba16d.chunk.js.map",
+    "index.html": "/CFP/index.html",
+    "static/css/2.81bf1c20.chunk.css.map": "/CFP/static/css/2.81bf1c20.chunk.css.map",
+    "static/css/main.28df0447.chunk.css.map": "/CFP/static/css/main.28df0447.chunk.css.map",
+    "static/js/2.c83ba16d.chunk.js.LICENSE.txt": "/CFP/static/js/2.c83ba16d.chunk.js.LICENSE.txt",
+    "static/media/Memoria-Game.597416bd.JPG": "/CFP/static/media/Memoria-Game.597416bd.JPG",
+    "static/media/App.css": "/CFP/static/media/background.96ce567f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b47e817f.js",
+    "static/css/2.81bf1c20.chunk.css",
+    "static/js/2.c83ba16d.chunk.js",
+    "static/css/main.28df0447.chunk.css",
+    "static/js/main.55e81f91.chunk.js"
+  ]
+}
