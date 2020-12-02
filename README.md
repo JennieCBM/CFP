@@ -80,20 +80,20 @@ Ver en Github pages https://jenniecbm.github.io/CFP/#/
    Requerimientos: 
    -El id del elemento;    
 
-#### Tecnologias:
-Cliente: React.js - React-Router - Reactstrap - FetchApi 
-Servidor: Node.js - Express.js 
-Base de Datos: MySQL 
+### Tecnologias:
+
+- Cliente: React.js - React-Router - Reactstrap - FetchApi 
+- Servidor: Node.js - Express.js 
+- Base de Datos: MySQL 
 
 ### Contenido y características
-- Ver Balance de operaciones de
-- Login y logout
+- Ver Balance de operaciones de ingresos y egresos de dinero 
 - Añadir registros, borrarlos y editarlos.
 
 
 ## Instalación
 
-Debes renombrar el archivo `.env.example` a `.env`
+En el Servidor debes crear el archivo `.env`
 con los datos correspondientes a la base de datos. 
 
 ## Instalación de dependencias
@@ -104,4 +104,5 @@ npm i
 ```
 
 Éste recibe las dependencias desde el `package.json`
+ tanto en cliente como en servidor. 
 
