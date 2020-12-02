@@ -1,0 +1,40 @@
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.operations {
+  cursor: zoom-in;
+  background-color: rgba(241, 241, 241, 0.9);
+  font-weight: bold;
+}
+.operations:hover {
+  transform: scale(1.01);
+}
+.operations-home {
+  background-color: rgba(241, 241, 241, 0.9);
+  font-weight: bold;
+}
+tr {
+  text-align: center;
+}
+th,
+td {
+  max-width: 4em;
+  overflow: hidden;
+  border: none !important;
+}
+tr:not(.operations):not(.operations-home) {
+  background-color: rgba(57, 167, 187);
+  color: #fff;
+}
+
+.details {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.amount {
+  white-space: nowrap;
+}
+.operation-area button {
+  cursor: pointer;
+}

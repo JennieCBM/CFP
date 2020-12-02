@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "details": "Money that my friend owed me",
+    "amount": 290,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-25T22:14:26.000Z",
+    "type": "credit"
+  },
+  {
+    "id": 2,
+    "details": "free money",
+    "amount": 390,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-25T22:19:13.000Z",
+    "type": "credit"
+  },
+  {
+    "id": 3,
+    "details": "cook cake for birthday",
+    "amount": 700,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-25T22:19:51.000Z",
+    "type": "credit"
+  },
+  {
+    "id": 4,
+    "details": "freelance frontend work - login",
+    "amount": 1200,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-25T22:20:50.000Z",
+    "type": "credit"
+  },
+  {
+    "id": 5,
+    "details": "freelance frontend work - logout",
+    "amount": 1000,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-25T22:21:21.000Z",
+    "type": "credit"
+  },
+  {
+    "id": 6,
+    "details": "Salary",
+    "amount": 50000,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-25T22:41:40.000Z",
+    "type": "debit"
+  },
+  {
+    "id": 7,
+    "details": "ODIN bar",
+    "amount": 1000,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-26T00:04:30.000Z",
+    "type": "debit"
+  },
+  {
+    "id": 8,
+    "details": "cat food",
+    "amount": 300,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-26T00:04:53.000Z",
+    "type": "debit"
+  },
+  {
+    "id": 9,
+    "details": "vegetables",
+    "amount": 700,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-26T00:05:07.000Z",
+    "type": "debit"
+  },
+  {
+    "id": 10,
+    "details": "lunch for my amorcho and me",
+    "amount": 800,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-26T00:05:50.000Z",
+    "type": "debit"
+  },
+  {
+    "id": 11,
+    "details": "makeup",
+    "amount": 900,
+    "email": "jennie@gmail.com",
+    "created": "2020-11-26T00:06:14.000Z",
+    "type": "debit"
+  },
+  {
+    "id": 13,
+    "details": "go to dance",
+    "amount": 2000,
+    "email": "anibal@gmail.com",
+    "created": "2020-11-26T00:20:25.000Z",
+    "type": "debit"
+  },
+  {
+    "id": 15,
+    "details": "test2",
+    "amount": 2,
+    "email": "anibal@gmail.com",
+    "created": "2020-11-26T16:05:09.000Z",
+    "type": "debit"
+  },
+  {
+    "id": 16,
+    "details": "test3",
+    "amount": 2,
+    "email": "anibal@gmail.com",
+    "created": "2020-11-27T14:54:00.000Z",
+    "type": "debit"
+  }
+]

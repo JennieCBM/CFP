@@ -1,0 +1,35 @@
+.modal-header {
+  justify-content: center;
+  text-align: center;
+}
+.modal-header h3 {
+  text-align: center;
+  color: rgb(8, 36, 44);
+}
+.modal-body {
+  font-weight: bold;
+  color: rgb(26, 116, 143);
+}
+.modal-footer .form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.modal-footer .form-group button[type="submit"],
+.modal-footer .form-group button[type="button"] {
+  background-color: rgb(26, 116, 143);
+  border: none;
+  width: 40%;
+  font-size: 1.2em;
+}
+.modal-footer .form-group button[type="submit"]:hover,
+.modal-footer .form-group button[type="button"]:hover {
+  background-color: rgb(8, 36, 44);
+  transform: scale(1.01);
+}
+.modal-body p {
+  margin-bottom: 0;
+  text-align: center;
+}
