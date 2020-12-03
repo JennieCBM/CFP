@@ -4,8 +4,11 @@
 ```
 El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta el 15/12/2020.
 ```
+## Funcionalidad General:
+- Ver Balance de operaciones de ingresos y egresos de dinero. 
+- Añadir registros, borrarlos y editarlos.
 
-## Estructura y Funcionalidad:
+## Estructura:
 
 ## Cliente: 
   ### My Records (Home) 
@@ -22,7 +25,7 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
     Al hacer click en la tarjeta superior derecha se despliega un modal con un formulario para agregar los datos requeridos - *Details, Amount y Type* - posteriormente al hacer click en el icono de check :ballot_box_with_check: se realiza una peticion de tipo POST a la API, la cual procesa el llamado e impacta el cambio en la base de datos, mientras tanto, el cliente cambia el estado haciendo un re-render del componente, lo cual dispara nuevamente una llamada de tipo GET a la API para obtener todos los datos de la lista, los cuales son filtrados mediante un metodo slice dando como resultado una lista de las 10 ultimas operaciones incluyendo el nuevo dato.
   
   ### All my Operations
-   #### Contenido:
+   ### Contenido:
   
   - Dos tablas, una operaciones de tipo Credito y una de operaciones de tipo Debito.
   - Cada Tabla contiene: 
@@ -34,72 +37,66 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
     - Funcionalidad de Zoom: Al hacer click en cualquier parte de las filas (excepto los botones de eliminar o editar) se despliega un modal con los datos de la operacion en detalle. 
     
 ### Servidor (API):
-  #### Rutas:
+  ### Rutas:
   ```
     '/operations'
   ```
-  - Peticion de tipo GET;
+  1. Peticion de tipo GET;
    - **Response:** 
      - **HTTP Status code:** 200.
      - **Response:** Objeto Json con todos los elementos de la tabla *operations* en orden de creacion.
    - **Requerimientos:** No.
-
    ```
    '/add/:type'
    ```
-  - Peticion de tipo POST;
+  2. Peticion de tipo POST;
    - **Response:** 
      - **HTTP Status code:** 201.
-     - **Response:** *operacion creada!*.
+     - **Response:** *Operation is created!*.
    - **Requerimientos:**
-      - **Nombre de Tabla:** *operations*.
+      - **Parametros en la ruta:** Nombre de Tabla: -*operations*-.
       - **En el cuerpo de la peticion:** un objeto Json con los siguientes datos: 
         - Amount (monto),
         - Details (detalles),
         - Email (correo electronico),
-        - Type (tipo: debito o credito).
+        - Type (tipo: debito o credito).     
      ```
-    './update/:id'
+     './update/:id'
      ```   
-   - Peticion de tipo PUT;
-    - Response -status 200- operacion actualizada;
-   
-   Requerimientos: 
-   -El id del elemento;
-   -El cuerpo de la peticion requiere: amount, details;
-   
-   #### -.'./delete/:id'
-     
-   Peticion de tipo DELETE;
-   
-   Response -status 200- operacion eliminada;
-   
-   Requerimientos: 
-   -El id del elemento;    
+   3. Peticion de tipo PUT;
+   - **Response:** 
+     - **HTTP Status code:** 200.
+     - **Response:** *Operation updated!*.
+   - **Requerimientos:**
+      - **Parametros en la ruta:** ID del elemento.
+      - **En el cuerpo de la peticion:** un objeto Json con los siguientes datos: 
+        - Amount (monto),
+        - Details (detalles).   
+     ```
+     './delete/:id'
+     ```    
+   4. Peticion de tipo DELETE;
+   - **Response:** 
+     - **HTTP Status code:** 200.
+     - **Response:** *Operation is deleted!*.
+   - **Requerimientos:**
+      - **Parametros en la ruta:** ID del elemento. 
 
-### Tecnologias:
+## Tecnologias:
 
-- Cliente: React.js - React-Router - Reactstrap - FetchApi 
-- Servidor: Node.js - Express.js 
-- Base de Datos: MySQL 
+- **Cliente:** React.js - React-Router - Reactstrap - FetchApi. 
+- **Servidor:** Node.js - Express.js. 
+- **Base de Datos:** MySQL. 
 
-### Contenido y características
-- Ver Balance de operaciones de ingresos y egresos de dinero 
-- Añadir registros, borrarlos y editarlos.
+## Instalación:
 
-
-## Instalación
-
-En el Servidor debes crear el archivo `.env`
+1. En el Servidor debes crear el archivo `.env`
 con los datos correspondientes a la base de datos. 
 
-## Instalación de dependencias
-Desde la terminal, usa el siguiente comando:
-
-```
-npm i 
-```
-
+2. Desde la terminal, usa el siguiente comando:
+  ```
+  npm i 
+  ```
 Éste recibe las dependencias desde el `package.json`
  tanto en cliente como en servidor. 
 
