@@ -12,7 +12,7 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
 
 ### Cliente: 
   ### My Records (Home) 
-   ### Contenido:
+   ###### Contenido:
   - Balance de ingresos y egresos de dinero.
   
   - Una Tabla con los ultimos diez datos ingresados descritos en las siguientes columnas:
@@ -25,7 +25,7 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
     Al hacer click en la tarjeta superior derecha se despliega un modal con un formulario para agregar los datos requeridos - *Details, Amount y Type* - posteriormente al hacer click en el icono de check :ballot_box_with_check: se realiza una peticion de tipo POST a la API, la cual procesa el llamado e impacta el cambio en la base de datos, mientras tanto, el cliente cambia el estado haciendo un re-render del componente, lo cual dispara nuevamente una llamada de tipo GET a la API para obtener todos los datos de la lista, los cuales son filtrados mediante un metodo slice dando como resultado una lista de las 10 ultimas operaciones incluyendo el nuevo dato.
   
   ### All my Operations
-   ### Contenido:
+   ###### Contenido:
   
   - Dos tablas, una operaciones de tipo Credito y una de operaciones de tipo Debito.
   - Cada Tabla contiene: 
@@ -37,7 +37,7 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
     - Funcionalidad de Zoom: Al hacer click en cualquier parte de las filas (excepto los botones de eliminar o editar) se despliega un modal con los datos de la operacion en detalle. 
     
 ### Servidor (API):
-  ### Rutas:
+  ###### Rutas:
   ```
     '/operations'
   ```
