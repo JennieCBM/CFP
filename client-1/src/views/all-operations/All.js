@@ -30,12 +30,10 @@ const All = () => {
 
   //llamada a la api para mostrar la lista con todos los datos
   useEffect(() => {
-    fetch(`https://cors-anywhere.herokuapp.com/http://${hosting}:3050/operations`)
+    fetch(`http://${hosting}:3050/operations`)
       .then((res) => {
         if (res.status === 200) {
-          console.log("entro en el 200");
           res.json().then((result) => {
-            console.log(result);
             //mientras carga la llamada muestro el componente loader, para eso debe estar en true
             setIsLoaded(true);
             //almaceno la respuesta en el estado correspondiente
@@ -50,13 +48,11 @@ const All = () => {
         setIsLoaded(true);
         //si el error existe muestro el componente error
         setError(error);
-        console.log(error);
       });
   }, [count]);
   //almacenamiento del dato que esta siendo clickeado por el usuario
   useEffect(() => {
     if (object) {
-      console.log(object);
     }
   }, [object]);
 
@@ -64,19 +60,16 @@ const All = () => {
   useEffect(() => {
     switch (wichModal) {
       case "zoom":
-        console.log("openZoom");
         setModal(!modal);
         break;
       case "delete":
-        console.log("openDelete");
         setModal(!modal);
         break;
       case "edit":
-        console.log("openEdit");
         setModal(!modal);
         break;
       default:
-        console.log(null);
+        
         break;
     }
   }, [wichModal]);

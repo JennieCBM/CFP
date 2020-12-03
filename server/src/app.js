@@ -98,7 +98,7 @@ app.post('/add/:type', (req, res)=>{
     }else if(type === 'users'){
         connection.query(sql, userObj, error =>{
             if(error) throw error;
-            res.status(200);
+            res.status(201);
             res.send('New user created');     
         });
     }

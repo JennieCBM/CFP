@@ -4,18 +4,16 @@ import { ModalHeader, ModalFooter, Button } from "reactstrap";
 const hosting = "54.232.154.61";
 const Delete = (props) => {
   const sendAndClose = async () => {
-    console.log(props);
     try {
       let config = {
         method: "DELETE",
       };
       let res = await fetch(
-        `https://cors-anywhere.herokuapp.com/http://${hosting}:3050/delete/${props.object.id}`,
+        `http://${hosting}:3050/delete/${props.object.id}`,
         config
       );
-      console.log(props.object.id);
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
     props.reload();
     props.closeModal();

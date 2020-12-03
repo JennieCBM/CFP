@@ -24,12 +24,10 @@ const Home = () => {
 
   //llamada de tipo get para traerme todas las operaciones
   useEffect(() => {
-    fetch(`https://cors-anywhere.herokuapp.com/http://${hosting}:3050/operations`)
+    fetch(`http://${hosting}:3050/operations`)
       .then((res) => {
         if (res.status === 200) {
-          console.log("entro en el 200");
           res.json().then((result) => {
-            console.log(result);
             //mientras carga la llamada muestro el componente loader, para eso debe estar en true
             setIsLoaded(true);
             //almaceno la respuesta en el estado correspondiente
@@ -44,10 +42,8 @@ const Home = () => {
         setIsLoaded(true);
         //si el error existe muestro el componente error
         setError(error);
-        console.log(error);
       });
   }, [count]);
-  console.log(error);
   if (error) {
     if (error === 204) {
       const toggle = () => {
@@ -84,7 +80,6 @@ const Home = () => {
     return <Loading />;
   } else {
     //funcion para el balance
-    console.log(items);
     const addUp = (n) => {
       const amounts = n.map((item) => item.amount);
       const total = amounts.reduce((a, b) => a + b, 0);
@@ -130,7 +125,7 @@ const Home = () => {
           </Row>
         </div>
         <h2 className="title">Your last 10 records</h2>
-        <Table className="table">
+        <Table className="table table-home">
           <thead>
             <tr>
               <th>TYPE</th>

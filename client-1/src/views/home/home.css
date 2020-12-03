@@ -48,6 +48,9 @@
   max-width: 90%;
   margin: 0 auto;
 }
+.table-home{
+  pointer-events: none;
+}
 
 @media (max-width: 769px) {
   .title {

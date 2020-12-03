@@ -13,20 +13,15 @@ const Operation = (props) => {
   //abrir el modal correspondiente
   useEffect(() => {
     if (isAButton) {
-      console.log("yes, is a button");
-      console.log(isAButton);
       if (isAButton === "delete") {
-        console.log("is Delete");
         setterObject();
         props.toggle("delete");
         setIsAButton(null);
       } else if (isAButton === "edit") {
-        console.log("is edit");
         setterObject();
         props.toggle("edit");
         setIsAButton(null);
       } else if (isAButton === "zoom") {
-        console.log("is Zoom");
         setterObject();
         props.toggle("zoom");
         setIsAButton(null);
@@ -35,7 +30,6 @@ const Operation = (props) => {
   }, [isAButton]);
 
   const setterObject = () => {
-    console.log(props.operation);
     const { id, details, amount, email, created, type } = props.operation;
     const childrenObject = {
       id,

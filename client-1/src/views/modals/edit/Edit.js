@@ -22,12 +22,12 @@ const Add = (props) => {
 
   //funcion para recuperar los datos ingresados por el usuario en los imputs
   const handleInputChange = ({ name, value }) => {
-    console.log(name, value);
     setData({
       ...data,
       [name]: value,
     });
   };
+  
   //funcion para enviar los datos ingresados y editar la operacion
   const sendAndClose = async () => {
     try {
@@ -40,16 +40,14 @@ const Add = (props) => {
         body: JSON.stringify(data),
       };
       let res = await fetch(
-        `https://cors-anywhere.herokuapp.com/http://${hosting}:3050/update/${props.object.id}`,
+        `http://${hosting}:3050/update/${props.object.id}`,
         config
       );
-      console.log(res);
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
     props.reload();
     props.closeModal();
-    console.log(data.details);
   };
 
   return (
