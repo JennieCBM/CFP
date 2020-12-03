@@ -10,7 +10,7 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
 
 ## Estructura:
 
-## Cliente: 
+### Cliente: 
   ### My Records (Home) 
    ### Contenido:
   - Balance de ingresos y egresos de dinero.
