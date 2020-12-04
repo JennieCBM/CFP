@@ -59,10 +59,11 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
         - Amount (monto),
         - Details (detalles),
         - Email (correo electronico),
-        - Type (tipo: debito o credito).     
-     ```
-     './update/:id'
-     ```   
+        - Type (tipo: debito o credito).   
+        
+    ```
+    './update/:id'
+    ```   
    3. Peticion de tipo PUT;
    - **Response:** 
      - **HTTP Status code:** 200.
@@ -72,9 +73,10 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
       - **En el cuerpo de la peticion:** un objeto Json con los siguientes datos: 
         - Amount (monto),
         - Details (detalles).   
-     ```
-     './delete/:id'
-     ```    
+        
+    ```
+    './delete/:id'
+    ```    
    4. Peticion de tipo DELETE;
    - **Response:** 
      - **HTTP Status code:** 200.
