@@ -38,7 +38,7 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
     
 ### Servidor (API):
   ###### Rutas:
-  1. Peticion de tipo GET;
+  **1. Peticion de tipo GET;**
   ```
     '/operations'
   ```
@@ -47,7 +47,7 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
      - **Response:** Objeto Json con todos los elementos de la tabla *operations* en orden de creacion.
    - **Requerimientos:** No.
   
-  2. Peticion de tipo POST;
+  **2. Peticion de tipo POST;**
   ```
   '/add/:type'
   ```
@@ -62,7 +62,7 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
         - Email (correo electronico),
         - Type (tipo: debito o credito).           
    
-   3. Peticion de tipo PUT;
+   **3. Peticion de tipo PUT;**
    ```
    './update/:id'
    ``` 
@@ -75,7 +75,7 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
         - Amount (monto),
         - Details (detalles).         
     
-   4. Peticion de tipo DELETE;
+   **4. Peticion de tipo DELETE;**
    ```
    './delete/:id'
    ```
