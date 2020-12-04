@@ -38,18 +38,19 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
     
 ### Servidor (API):
   ###### Rutas:
+  1. Peticion de tipo GET;
   ```
     '/operations'
   ```
-  1. Peticion de tipo GET;
    - **Response:** 
      - **HTTP Status code:** 200.
      - **Response:** Objeto Json con todos los elementos de la tabla *operations* en orden de creacion.
    - **Requerimientos:** No.
-   ```
-   '/add/:type'
-   ```
+  
   2. Peticion de tipo POST;
+  ```
+  '/add/:type'
+  ```
    - **Response:** 
      - **HTTP Status code:** 201.
      - **Response:** *Operation is created!*.
@@ -59,12 +60,12 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
         - Amount (monto),
         - Details (detalles),
         - Email (correo electronico),
-        - Type (tipo: debito o credito).   
-        
-    ```
-    './update/:id'
-    ```   
+        - Type (tipo: debito o credito).           
+   
    3. Peticion de tipo PUT;
+   ```
+   './update/:id'
+   ``` 
    - **Response:** 
      - **HTTP Status code:** 200.
      - **Response:** *Operation updated!*.
@@ -72,12 +73,12 @@ El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta 
       - **Parametros en la ruta:** ID del elemento.
       - **En el cuerpo de la peticion:** un objeto Json con los siguientes datos: 
         - Amount (monto),
-        - Details (detalles).   
-        
-    ```
-    './delete/:id'
-    ```    
+        - Details (detalles).         
+    
    4. Peticion de tipo DELETE;
+   ```
+   './delete/:id'
+   ```
    - **Response:** 
      - **HTTP Status code:** 200.
      - **Response:** *Operation is deleted!*.
