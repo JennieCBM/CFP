@@ -1,8 +1,7 @@
 # Control Finances APP
 ### Proyecto Challenge para aplicar en Alkemy.org.
- **Ver en [Github pages](https://jenniecbm.github.io/CFP/#/)**
 ```
-El proyecto actualemente se encuentra en producción, desde el 02/12/2020 hasta el 15/12/2020.
+El proyecto se encuentra en mantenimiento y actualmente no esta en producción.
 ```
 ## Funcionalidad General:
 - Ver Balance de operaciones de ingresos y egresos de dinero. 
