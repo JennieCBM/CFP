@@ -13,7 +13,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
 
-const hosting = "54.232.154.61";
+/* const hosting = "54.232.154.61"; */
+/* const hosting = "localhost"; */
+const hosting = "192.168.0.3";
+
 const Add = (props) => {
   const [data, setData] = useState({
     details: props.object.details,

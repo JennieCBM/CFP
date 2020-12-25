@@ -12,7 +12,6 @@ const Zoom = (props) => {
         </ModalHeader>
         <ModalBody>
           <p>DETAILS: {details}</p>
-          <p>EMAIL: {email}</p>
           <p>CREATED: {created}</p>
           <p>AMOUNT: ${amount}</p>
         </ModalBody>

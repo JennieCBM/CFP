@@ -8,9 +8,11 @@ import { Card, CardTitle, Row, Col, Table, Modal, CardBody } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-const hosting = "54.232.154.61";
+/* const hosting = "54.232.154.61"; */
+/* const hosting = "localhost"; */
+const hosting = "192.168.0.3";
 
-const Home = () => {
+const Home = (props) => {
   //almaceno el resultado del request
   const [items, setItems] = useState([]);
   //manejo del error en el request
@@ -24,7 +26,7 @@ const Home = () => {
 
   //llamada de tipo get para traerme todas las operaciones
   useEffect(() => {
-    fetch(`http://${hosting}:3050/operations`)
+    fetch(`http://${hosting}:3050/operations/user/${props.user.email}`)
       .then((res) => {
         if (res.status === 200) {
           res.json().then((result) => {
@@ -32,6 +34,8 @@ const Home = () => {
             setIsLoaded(true);
             //almaceno la respuesta en el estado correspondiente
             setItems(result);
+            setError(null);
+            
           });
         } else if (res.status === 204) {
           setError(res.status);
@@ -55,10 +59,10 @@ const Home = () => {
           <Modal isOpen={modal}>
             <Add
               toggle={() => toggle()}
-              reload={() => {
-                setCount(count + 1);
-                window.location.reload();
-              }}
+              reload={() => 
+                setCount(count + 1)
+              }
+              user={props.user.email}
             />
           </Modal>
           <div className="card-container">
@@ -78,7 +82,7 @@ const Home = () => {
     }
   } else if (!isLoaded) {
     return <Loading />;
-  } else {
+  } else if (items){
     //funcion para el balance
     const addUp = (n) => {
       const amounts = n.map((item) => item.amount);
@@ -100,7 +104,11 @@ const Home = () => {
     return (
       <div className="main">
         <Modal isOpen={modal}>
-          <Add toggle={() => toggle()} reload={() => setCount(count + 1)} />
+          <Add
+            toggle={() => toggle()}
+            reload={() => setCount(count + 1)}
+            user={props.user.email}
+          />
         </Modal>
         <div className="options">
           <Row>
@@ -139,6 +147,7 @@ const Home = () => {
               <Operation
                 toggle={(item) => toggle(item)}
                 operation={operation}
+                key={operation.id}
               />
             ))}
           </tbody>

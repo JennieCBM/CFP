@@ -1,6 +1,6 @@
 * {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; 
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -83,7 +83,7 @@ body,
   font-size: 1.5em;
 }
 .card-container {
-  margin-top: 10em;
+  margin-top: 100px;
 }
 @keyframes crazzyShadow {
   0% {
@@ -110,6 +110,7 @@ body,
   justify-content: center;
   padding-top: 5em;
 }
+
 @media (max-width: 769px) {
   .app {
     width: 100%;

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
+import { useHistory } from "react-router-dom";
 import Operation from "../../components/operations/Operation";
 import "./all.css";
-import { Link } from "react-router-dom";
 import Error from "../../components/Error";
 import Loading from "../../components/Loading";
 import { Table, Card, CardTitle, CardBody, Modal } from "reactstrap";
@@ -11,8 +11,12 @@ import Edit from "../modals/edit/Edit";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
 
-const hosting = "54.232.154.61";
-const All = () => {
+/* const hosting = "54.232.154.61"; */
+/* const hosting = "localhost"; */
+const hosting = "192.168.0.3";
+
+const All = (props) => {
+  console.log(props);
   //almaceno el resultado del request
   const [items, setItems] = useState([]);
   //manejo de errores en el request
@@ -27,10 +31,12 @@ const All = () => {
   const [object, setObject] = useState(null);
   //este estado me va a indicar que modal debo abrir
   const [wichModal, setWichModal] = useState(false);
+  //Hook del history para volver a home
+  let history = useHistory(); 
 
   //llamada a la api para mostrar la lista con todos los datos
   useEffect(() => {
-    fetch(`http://${hosting}:3050/operations`)
+    fetch(`http://${hosting}:3050/operations/user/${props.user.email}`)
       .then((res) => {
         if (res.status === 200) {
           res.json().then((result) => {
@@ -76,18 +82,19 @@ const All = () => {
 
   if (error) {
     if (error === 204) {
+      const redirect = () => {
+        history.push("/")
+      };
       return (
         <div className="main">
           <div className="card-container">
-            <Card body className="card-add">
+            <Card body className="card-add" onClick={redirect}>
               <CardTitle>
                 You don't have any records yet, if do you want to add a new
                 record, go to My Records.
               </CardTitle>
               <CardBody>
-                <Link to="/">
                   <FontAwesomeIcon className="back" icon={faLongArrowAltLeft} />
-                </Link>
               </CardBody>
             </Card>
           </div>
@@ -158,6 +165,7 @@ const All = () => {
                         toggle={toggle}
                         objectSetter={setObject}
                         operation={operation}
+                        key={operation.id}
                         allItems
                       />
                     );
@@ -186,6 +194,7 @@ const All = () => {
                         toggle={toggle}
                         objectSetter={setObject}
                         operation={operation}
+                        key={operation.id}
                         allItems
                       />
                     );

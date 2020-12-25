@@ -15,9 +15,9 @@
 }
 .logo-nav {
   height: 100%;
-  width: 30%;
+  width: 50%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-weight: bold;
@@ -25,6 +25,17 @@
 .logo-nav h3 {
   margin-block-start: 0;
   margin-block-end: 0;
+  color: rgba(12, 52, 68, 0.8);
+  font-weight: bolder;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+}
+.logo-nav h5 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: block;
+  font-size: 100%;
+  padding: 0 1em;
+  font-weight: bold;
 }
 nav {
   display: grid;
@@ -36,7 +47,7 @@ nav {
 }
 nav a {
   text-decoration: none;
-  color: #aaa;
+  color:  rgba(12, 52, 68, 0.8);
   font-size: 1em;
   margin: 0 0.5em;
 }
@@ -55,6 +66,12 @@ nav a:hover {
     justify-content: stretch;
     white-space: nowrap;
   }
+  .logo-nav {
+    width: 30%;
+  }
+  .logo-nav h5 {
+    display: none;
+  }
 }
 @media only screen and (max-width: 380px) {
   .logo-nav {
@@ -64,4 +81,11 @@ nav a:hover {
   .nav a {
     margin: 0 0.3em;
   }
+  .logo-nav {
+    width: 30%;
+  }
+  .logo-nav h5 {
+    display: none;
+  }
 }
+

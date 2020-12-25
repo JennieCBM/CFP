@@ -14,12 +14,14 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import "./add.css";
 
-const hosting = "54.232.154.61";
+/* const hosting = "54.232.154.61"; */
+/* const hosting = "localhost"; */
+const hosting = "192.168.0.3";
 const Add = (props) => {
   const [data, setData] = useState({
     details: "",
     amount: "",
-    email: "jennie@jennie.com",
+    email: props.user, //recibe user
     type: "debit",
   });
   //funcion para recuperar los datos ingresados por el usuario en los imputs
