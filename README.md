@@ -1,5 +1,4 @@
 # Control Finances APP
-### Proyecto Challenge para aplicar en Alkemy.org.
 ```
 El proyecto se encuentra en mantenimiento y actualmente no esta en producción.
 ```
